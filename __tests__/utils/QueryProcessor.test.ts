@@ -35,4 +35,9 @@ describe("QueryProcessor", () => {
         expect(QueryProcessor("What is 18 multiplied by 8?")).toEqual("144");
         expect(QueryProcessor("What is 75 multiplied by 65?")).toEqual("4875");
     });
+
+    test('should subtract numbers', () => {
+        expect(QueryProcessor("What is 76 minus 32?")).toEqual("44");
+        expect(QueryProcessor("What is 5 minus 70?")).toEqual("-65");
+    });
 });
