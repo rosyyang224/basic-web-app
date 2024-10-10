@@ -31,5 +31,12 @@ export default function QueryProcessor(query: string): string {
     return (x - y).toString();
   }
 
+  const pwrMatch = query.match(/What is (\d+) to the power of (\d+)\?/);
+  if (pwrMatch) {
+    const x: number = parseInt(pwrMatch[1]);
+    const y: number = parseInt(pwrMatch[2]);
+    return (x ** y).toString();
+  }
+
   return "";
 }

@@ -40,4 +40,9 @@ describe("QueryProcessor", () => {
         expect(QueryProcessor("What is 76 minus 32?")).toEqual("44");
         expect(QueryProcessor("What is 5 minus 70?")).toEqual("-65");
     });
+
+    test('should exponentiate numbers', () => {
+        expect(QueryProcessor("What is 2 to the power of 3?")).toEqual("8");
+        expect(QueryProcessor("What is 3 to the power of 4?")).toEqual("81");
+    });
 });
